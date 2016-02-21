@@ -18,7 +18,7 @@
 
 
 
-tareas Automatizadas con Grunt:
+Tareas Automatizadas con Grunt:
 
 
 • Inicia un servidor para PHP
@@ -28,6 +28,8 @@ tareas Automatizadas con Grunt:
 • minifica css
 
 • minifica/uglyfica javascript
+
+• optimiza imagenes para la web
 
 • Refresca el navegador automaticamente tras modificar archivos scss, js en /src
   y archovs php y html dentro de la capeta /public.

@@ -64,6 +64,16 @@ module.exports = function(grunt) {
 		            open: true
 				}
 			} 
+		},
+		imagemin: {
+		    dynamic: {
+		      files: [{
+		        expand: true,
+		        cwd: 'src/images/',
+		        src: ['**/*.jpg'],
+		        dest: 'public/res/img/'
+		      }]
+		    } 
 		}
 	});
 	grunt.loadNpmTasks('grunt-browser-sync');
@@ -71,7 +81,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-php');
 
 	grunt.registerTask('default',['php','browserSync','watch']);
+	grunt.registerTask('imagenes',[ 'imagemin']);
 }
